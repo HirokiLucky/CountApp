@@ -17,13 +17,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button button = (Button) this.findViewById(R.id.count_button);
+        Button buttonUp = (Button) this.findViewById(R.id.countUp_button);
+        Button buttonDown = (Button) this.findViewById(R.id.countDown_button);
         TextView textView = (TextView) this.findViewById(R.id.count_text);
-        button.setOnClickListener(new View.OnClickListener() {
+        buttonUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "ボタンが押されました", Snackbar.LENGTH_SHORT).show();
                 count++;
+                textView.setText((String.valueOf(count)));
+            }
+        });
+
+        buttonDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "ボタンが押されました", Snackbar.LENGTH_SHORT).show();
+                count--;
                 textView.setText((String.valueOf(count)));
             }
         });
