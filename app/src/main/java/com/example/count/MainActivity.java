@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         buttonUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "ボタンが押されました", Snackbar.LENGTH_SHORT).show();
+                //Snackbar.make(view, "ボタンが押されました", Snackbar.LENGTH_SHORT).show();
                 count++;
                 textView.setText((String.valueOf(count)));
             }
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         buttonDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "ボタンが押されました", Snackbar.LENGTH_SHORT).show();
+                //Snackbar.make(view, "ボタンが押されました", Snackbar.LENGTH_SHORT).show();
                 count--;
                 textView.setText((String.valueOf(count)));
             }
